@@ -1,3 +1,8 @@
+BT305 Assignment (Lab-2)
+Name: Sumit Kumar
+Roll number: 210106076
+
+
 4A. How many amino acids have large side chains, sidechains with CG, CD etc atoms = 736
 
 Considered These as amino acids have large side chains
