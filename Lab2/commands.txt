@@ -1,0 +1,6 @@
+1. vi file.pdb (Open PDB file using vi editor)
+2. :g/pattern1\|pattern2\|pattern3/d (Delete lines which contain given pattern)
+3. :g/HETATM\|ATOM\|SOL/p (Print the lines which contain given pattern in terminal)
+4. :g/HETATM\|ATOM\|SOL/w new_file.txt (Print the lines which contain given pattern in new file)
+5. awk '/^ATOM/ {count++} END {print count}' 4DFR.pdb (/^ATOM/ => ensure that lines has given pattern)
+6. awk '/^ATOM/ && ($3=="AA") {count++} END {print count}' 4DFR.pdb
