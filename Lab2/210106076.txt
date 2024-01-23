@@ -1,4 +1,12 @@
-4A. How many amino acids have large side chains, sidechains with CG, CD etc atoms = 890
+4A. How many amino acids have large side chains, sidechains with CG, CD etc atoms = 736
+
+Considered These as amino acids have large side chains
+Tyrosine(TYR)
+Tryptophan(TRP)
+Phenylalanine(PHE)
+Leucine(LEU)
+Isoleucine(ILE)
+
 4B. How many of them are acidic side chains = 402
 4C.  How many have basic side chains = 405
 4D. What could be the net charge of this particular proteins = #(Basic Residue)-#(Acidic Residue) = 405-402 = 3
@@ -6,21 +14,16 @@
 6A. Total number of amino acids = 322
 6B. No. of alanines in the proteins = 130
 6C. No. of tryptophan’s in the proteins = 140
-6D. Total number of aminoacid’s with polar side chains = 1233
+6D. Total number of aminoacid’s with polar side chains = 530
 
-Considered These amino acids as polar side chains
+Considered These as polar side chains amino acids
 Serine (SER)
 Threonine (THR)
 Asparagine (ASN)
 Glutamine (GLN)
 Tyrosine (TYR)
 Cysteine (CYS)
-Methionine (MET)
-Histidine (HIS)
-Aspartic Acid (ASP)
-Glutamic Acid (GLU)
-Lysine (LYS)
-Arginine (ARG)
+Glycine (GLY)
 
 7.  Sum of X coordinates = 50656.1 
     Sum of Y coordinates = 157120
