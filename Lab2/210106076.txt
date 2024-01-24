@@ -3,7 +3,7 @@ Name: Sumit Kumar
 Roll number: 210106076
 
 
-4A. How many amino acids have large side chains, sidechains with CG, CD etc atoms = 736
+4A. How many amino acids have large side chains, sidechains with CG, CD etc atoms = 76
 
 Considered These as amino acids have large side chains
 Tyrosine(TYR)
