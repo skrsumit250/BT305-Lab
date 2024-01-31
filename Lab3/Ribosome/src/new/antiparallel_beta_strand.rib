@@ -6,18 +6,22 @@ TITLE RIBOSOME EXAMPLE
 
 default beta sheet
 
-res gly phi 143.3 psi -158.0 
-
-res glu phi -143.3 psi 143.3  
-
-res thr phi -140.4 psi 163.5  
-
-res thr phi -132.0 psi 172.1   
-
-res thr phi -158.6 psi 156.1 
-
-res glu phi -100.1 psi 135.9 
-
-res ala phi -152.5 psi 155.5 
-
-res val phi -69.4 psi -39.4  
+res THR  phi   -94.1 psi  130.2
+res TYR  phi  -118.9 psi  150.3
+res LYS  phi  -119.1 psi  154.1  
+res LEU  phi  -130.2 psi  126.6
+res ILE  phi  -102.9 psi -178.0   
+res LEU  phi  -103.0 psi  178.2   
+res ASN  phi  -130.5 psi  179.3   
+res GLY  phi  -85.4  psi -178.8   
+res LYS  phi  -73.0  psi -178.2   
+res THR  phi  -108.3 psi -180.0   
+res LEU  phi  -109.5 psi  178.9   
+res LYS  phi  -132.4 psi 178.5   
+res GLY  Cphi  143.3 psi -177.9   
+res GLU  phi  -143.3 psi 174.9   
+res THR  phi  -140.4 psi 179.6   
+res THR  phi  -132.0 psi 176.5   
+res THR  phi  -158.6 psi 176.1   
+res GLU  phi  -100.1 psi 178.0   
+res ALA  phi  -152.5 psi -179.8
