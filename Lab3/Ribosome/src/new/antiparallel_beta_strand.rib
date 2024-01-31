@@ -4,7 +4,7 @@
 
 TITLE RIBOSOME EXAMPLE
 
-default beta sheet
+default beta-sheet
 
 res THR  phi   -94.1 psi  130.2
 res TYR  phi  -118.9 psi  150.3
