@@ -1,0 +1,8 @@
+# sample command file. this builds the peptide as a helix
+
+#except for the glycine which has a phi of 90.0 and psi of 0.0
+
+TITLE RIBOSOME EXAMPLE 2
+
+default helix
+
