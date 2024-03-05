@@ -13,7 +13,7 @@ int main(){
     int n;
     cin>>n;
     outputFile<<"# sample command file. this builds the peptide as a helix\n\n#except for the glycine which has a phi of 90.0 and psi of 0.0\n\nTITLE RIBOSOME EXAMPLE 2\n\ndefault helix\n\n";
-    vector<string>Amino_Acids{"ala","arg","asn","asp","cys","glu","gln","gly","his","ile","leu","lys","met","phe","pro","ser","thr","trp","tyr","val"};
+    vector<string>Amino_Acids{"ala","leu","glu","gln","lys","met","arg","asn","asp","cys","gly","his","ile","phe","pro","ser","thr","trp","tyr","val"};
     for(int i=0;i<n;i++){
         int idx=rand()%20;
         string aa=Amino_Acids[idx];
