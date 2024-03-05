@@ -1,5 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
+int random_angle(int l,int r){
+    int range=l+r+1;
+    int res=rand()%range;
+    return res-abs(l);
+}
 int main(){
     // ifstream inputFile("input.txt");
     ofstream outputFile("output.rib");
@@ -15,20 +20,15 @@ int main(){
 
         int strand=rand()%2;
         if(strand){ // Generate phi and psi for Alpha Helix
-            int phi=-1*(40+rand()%21); // Generate random phi angle between -40 deg and  -60 deg
-            int psi=rand()%41;
-            int sign=rand()%2;
-            if(sign)
-            psi=-1*psi;   // Generate random psi angle between -40 deg and  40 deg
-            
+            int phi=random_angle(-130,-30); // Generate random phi angle between -40 deg and  -130 deg
+            int psi=random_angle(-60,30);// Generate random psi angle between -40 deg and  40 deg
             outputFile<<"res "<<aa<<" phi "<<phi<<" psi "<<psi<<"\n";
         }
         else{   // Generate phi and psi for Beta Strand
-            int phi=-1*(110+rand()%21); // Generate random phi angle between -100 deg and  130 deg
-            int psi=110+rand()%21;  // Generate random psi angle between 110 deg and  130 deg
+            int phi=random_angle(-160,-30);// Generate random phi angle between -160 deg and  -30 deg
+            int psi=random_angle(90,180);  // Generate random psi angle between 90 deg and  180 deg
             outputFile<<"res "<<aa<<" phi "<<phi<<" psi "<<psi<<"\n";
         }
-        
     }
     return 0;
 }
