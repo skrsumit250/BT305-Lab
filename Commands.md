@@ -62,7 +62,7 @@
 - gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr -maxwarn 3
 - gmx mdrun -deffnm npt
 - gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_1.tpr -maxwarn 3
-gmx mdrun -v -deffnm md_1
+- gmx mdrun -v -deffnm md_1
 
 # Lab3:
 
@@ -97,7 +97,7 @@ gmx mdrun -v -deffnm md_1
 -    awk '{gsub(/ATOM/, "'$friend'"); print}' 4DFR.pdb - "file_${friend}.pdb"
 - done
 
-3B. cat friend1 friend2 friend3 - file 6
+- cat friend1 friend2 friend3 - file 6
 
 **Find particular amino acids/atoms and print in respective files**
 
