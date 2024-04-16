@@ -1,12 +1,6 @@
-Lab7:
-gmx pdb2gmx -f 1pgb.pdb -o 1pgb.gro -p 1pgb.top -inter -ignh
-gmx editconf -f 1pgb.gro -o 1pgbnew.gro -bt cubic -d 1.0
-gmx solvate -cp 1pgbnew.gro -cs -p 1pgb.top -o after_sol.gro
-gmx grompp -f em.mdp -c after_sol.gro -o em.trp -p 1pgb.top -maxwarn 3
-gmx mdrun -v -s em.trp -o em.trr -g em.log -c after_em.gro
-gmx grompp -f md.mdp -c after_em.gro -o md.trp -p 1pgb.top -maxwarn 3
-gmx mdrun -v -s md.trp -o md.trr -g md.log -c after_md.gro -e md.edr -x md.xtc
-gmx view -f md.xtc -s md.tpr
+# Lab7:
+
+**Box Simulation for 1pgb.pdb**
 
 gmx pdb2gmx -f 1pgb.pdb -o 1pgb_processed.gro -water spce -ignh
 gmx editconf -f 1pgb_processed.gro -o 1pgb_newbox.gro -c -d 1.0 -bt cubic
@@ -22,6 +16,7 @@ gmx mdrun -deffnm npt
 gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_1.tpr -maxwarn 3
 gmx mdrun -v -deffnm md_1
 
+**Box Simulation for Your_name_trpcage.pdb**
 
 gmx pdb2gmx -f sumittrpcage.pdb -o trp_processed.gro -water spce -ignh
 gmx editconf -f trp_processed.gro -o trp_newbox.gro -c -d 1.0 -bt cubic
@@ -37,6 +32,7 @@ gmx mdrun -deffnm npt
 gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_1.tpr -maxwarn 3
 gmx mdrun -v -deffnm md_1
 
+**Box Simulation for beta_sheet.pdb**
 
 gmx pdb2gmx -f beta_sheet.pdb -o betasheet_processed.gro -water spce -ignh
 gmx editconf -f betasheet_processed.gro -o betasheet_newbox.gro -c -d 1.0 -bt cubic
@@ -52,6 +48,7 @@ gmx mdrun -deffnm npt
 gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_1.tpr -maxwarn 3
 gmx mdrun -v -deffnm md_1
 
+**Box Simulation for alpha_helix.pdb**
 
 gmx pdb2gmx -f helix.pdb -o alphahelix_processed.gro -water spce -ignh
 gmx editconf -f alphahelix_processed.gro -o alphahelix_newbox.gro -c -d 1.0 -bt cubic
@@ -67,15 +64,20 @@ gmx mdrun -deffnm npt
 gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_1.tpr -maxwarn 3
 gmx mdrun -v -deffnm md_1
 
-Lab3:
+# Lab3:
+
+**Compile ribosome to create ribosome and res.zmat files in src folder** 
 1. f77 -O *.f -o ribosome
+**Compile rib_file to pdb_file**
 2. ribosome "filename.com" "output_filename" res.smart
 
-Lab2:
+# Lab2:
+
 // :g/pattern1\|pattern2\|pattern3/d (Delete lines which contain given pattern)
 // :g/HETATM\|ATOM\|SOL/p (Print the lines which contain given pattern in terminal)
 // :g/HETATM\|ATOM\|SOL/w new_file.txt (Print the lines which contain given pattern in new file)
 
+**Find particular amino acids/atoms and print in respective files**
 
 3.  awk '/^ATOM/ && ($3=="CA") { print $0 }' 4DFR.pdb > file2
     awk '/^ATOM/ && ($3=="N") { print $0 }' 4DFR.pdb > file3
@@ -97,6 +99,8 @@ Lab2:
 
 3B. cat friend1 friend2 friend3 > file 6
 
+**Find particular amino acids/atoms and print in respective files**
+
 5.  awk '/^ATOM/ && ($3=="CG") { print $0 }' 4DFR.pdb > file7
 4A. awk '/^ATOM/ && ($4=="TYR" || $4=="TRP" || $4=="PHE" || $4=="LEU" || $4=="ILE") { print $0 }' 4DFR.pdb > file8.pdb
 4B. awk '/^ATOM/ && ($3=="CA") && ($4=="ASP" || $4=="GLU") { print $0 }' 4DFR.pdb > file9.pdb
@@ -106,6 +110,8 @@ Lab2:
 6B. awk '/^ATOM/ && ($3=="CA") && ($4=="ALA") {count++} END {print count}' 4DFR.pdb
 6C. awk '/^ATOM/ && ($3=="CA") && ($4=="TRP") {count++} END {print count}' 4DFR.pdb
 6D. awk '/^ATOM/ && ($3=="CA") && ($4=="SER" || $4=="THR" || $4=="ASN" || $4=="GLN" || $4=="TYR" || $4=="CYS" || $4=="GLY") {count++} END {print count}' 4DFR.pdb
+
+**Find sum of corrdinates**
 
 7.  awk '/^ATOM/ {sum_X+=$7} END {print sum_X}' 4DFR.pdb 
     awk '/^ATOM/ {sum_Y+=$8} END {print sum_Y}' 4DFR.pdb
