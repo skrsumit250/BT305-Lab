@@ -73,9 +73,9 @@ gmx mdrun -v -deffnm md_1
 
 # Lab2:
 
-// :g/pattern1\|pattern2\|pattern3/d (Delete lines which contain given pattern)
-// :g/HETATM\|ATOM\|SOL/p (Print the lines which contain given pattern in terminal)
-// :g/HETATM\|ATOM\|SOL/w new_file.txt (Print the lines which contain given pattern in new file)
+> :g/pattern1\|pattern2\|pattern3/d (Delete lines which contain given pattern)
+> :g/HETATM\|ATOM\|SOL/p (Print the lines which contain given pattern in terminal)
+> :g/HETATM\|ATOM\|SOL/w new_file.txt (Print the lines which contain given pattern in new file)
 
 **Find particular amino acids/atoms and print in respective files**
 
