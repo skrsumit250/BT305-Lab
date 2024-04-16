@@ -2,19 +2,19 @@
 
 **Box Simulation for 1pgb.pdb**
 
-gmx pdb2gmx -f 1pgb.pdb -o 1pgb_processed.gro -water spce -ignh
-gmx editconf -f 1pgb_processed.gro -o 1pgb_newbox.gro -c -d 1.0 -bt cubic
-gmx solvate -cp 1pgb_newbox.gro -cs spc216.gro -o 1pgb_solv.gro -p topol.top
-gmx grompp -f ions.mdp -c 1pgb_solv.gro -p topol.top -o ions.tpr -maxwarn 3
-gmx genion -s ions.tpr -o 1pgb_solv_ions.gro -p topol.top -pname NA -nname CL -neutral -conc 0.15
-gmx grompp -f minim.mdp -c 1pgb_solv_ions.gro -p topol.top -o em.tpr -maxwarn 3
-gmx mdrun -v -deffnm em
-gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -maxwarn 3
-gmx mdrun -v -deffnm nvt
-gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr -maxwarn 3
-gmx mdrun -deffnm npt
-gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_1.tpr -maxwarn 3
-gmx mdrun -v -deffnm md_1
+> gmx pdb2gmx -f 1pgb.pdb -o 1pgb_processed.gro -water spce -ignh
+> gmx editconf -f 1pgb_processed.gro -o 1pgb_newbox.gro -c -d 1.0 -bt cubic
+> gmx solvate -cp 1pgb_newbox.gro -cs spc216.gro -o 1pgb_solv.gro -p topol.top
+> gmx grompp -f ions.mdp -c 1pgb_solv.gro -p topol.top -o ions.tpr -maxwarn 3
+> gmx genion -s ions.tpr -o 1pgb_solv_ions.gro -p topol.top -pname NA -nname CL -neutral -conc 0.15
+> gmx grompp -f minim.mdp -c 1pgb_solv_ions.gro -p topol.top -o em.tpr -maxwarn 3
+> gmx mdrun -v -deffnm em
+> gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -maxwarn 3
+> gmx mdrun -v -deffnm nvt
+> gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr -maxwarn 3
+> gmx mdrun -deffnm npt
+> gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_1.tpr -maxwarn 3
+> gmx mdrun -v -deffnm md_1
 
 **Box Simulation for Your_name_trpcage.pdb**
 
