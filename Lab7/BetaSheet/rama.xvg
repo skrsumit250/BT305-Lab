@@ -1,0 +1,54 @@
+# This file was created Sat Apr 20 15:37:04 2024
+# Created by:
+#               :-) GROMACS - gmx rama, 2021.4-Ubuntu-2021.4-2 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /mnt/c/Users/Mr Nobody/Desktop/Study Material/BT305-Lab/Lab7/BetaSheet
+# Command line:
+#   gmx rama -f em.gro -s em.tpr -o rama.xvg
+# gmx rama is part of G R O M A C S:
+#
+# Getting the Right Output Means no Artefacts in Calculating Stuff
+#
+@    title "Ramachandran Plot"
+@    xaxis  label "Phi"
+@    yaxis  label "Psi"
+@TYPE xy
+@    with g0
+@    s0 linestyle 0
+@    s0 color 1
+@ view 0.2, 0.2, 0.8, 0.8
+@ world xmin -180
+@ world ymin -180
+@ world xmax 180
+@ world ymax 180
+@    xaxis  tick on
+@    xaxis  tick major 60
+@    xaxis  tick minor 30
+@    yaxis  tick on
+@    yaxis  tick major 60
+@    yaxis  tick minor 30
+@ s0 symbol 2
+@ s0 symbol size 0.4
+@ s0 symbol fill 1
+-80.0723  144.479  THR-2
+-125.747  147.322  TYR-3
+-125.103  137.66  LYS-4
+-128.743  121.354  LEU-5
+-67.0595  129.747  ILE-6
+-103.678  115.543  LEU-7
+-128.074  86.347  ASN-8
+-94.7725  -179.763  GLY-9
+-79.6135  -28.0474  LYS-10
+-115.196  -33.6074  THR-11
+-119.883  109.964  LEU-12
+-118.538  131.548  LYS-13
+176.136  -151.867  GLY-14
+-162.241  128.292  GLU-15
+-127.764  170.546  THR-16
+-137.95  166.791  THR-17
+-152.851  155.303  THR-18
+-93.7592  146.278  GLU-19
+-156.531  168.899  ALA-20
+-85.0453  -27.9329  VAL-21
